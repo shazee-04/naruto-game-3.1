@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto Survival</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="background" id="background" onkeydown="movement(event);">
+
+    <div class="loader" id="loader">
+        <div class="loader-inner">Almost there!</div>
+    </div>
+
+    <div class="landpage" id="landpage">
+        <div>
+            <img src="resources/images/menu.gif" class="menu" id="menu">
+        </div>
+        <div class="menudiv" id="menudiv">
+            <div class="menutext" id="menutext" onclick="clickstart();">Press "Enter" To Begin</div>
+        </div>
+    </div>
+
+    <div class="container" id="container">
+
+        <div class="header">
+            <div class="text">
+                <div class="score" id="score">0000</div>
+            </div>
+            <div class="text" style="margin-top: .3125rem;padding: auto;">
+                <div class="level" id="level">Level 01</div>
+            </div>
+            <div class="text">
+                <div class="name" id="name">naruto</div>
+            </div>
+        </div>
+
+        <img src="resources/sprites/Idle.gif" class="sprite" id="sprite">
+        <img src="resources/images/base2.png" class="base" id="base">
+
+        <div class="gameoverdiv" id="gameoverdiv">
+            <div class="gameovercard" id="gameovercard" onclick="clickstart();">
+                <div class="gameovertext" id="gameovertext">Game over</div>
+                <div class="gameovertext2" id="gameovertext2">-Press "Enter" to restart-</div>
+                <div class="highscore" id="highscore"></div>
+            </div>
+        </div>
+
+        <div class="hiddenimages">
+            <img src="resources/sprites/dead1.png">
+            <img src="resources/sprites/dead2.png">
+            <img src="resources/sprites/jumpV.gif">
+            <img src="resources/sprites/runbackward.gif">
+            <img src="resources/sprites/runforward.gif">
+            <img src="resources/sprites/down.gif">
+            <img src="resources/sprites/dead1.png">
+            <img src="resources/sprites/dead1.png">
+            <video src="resources/video/intro2.mp4"></video>
+        </div>
+
+    </div>
+
+    <div class="infodiv" id="infodiv">
+        <a href="info/info.html" target="_blank" title="details">
+            <div class="infocard">
+                <div><img src="info/images/info.png" class="infoimage"></div>
+                <div class="infotext">info</div>
+            </div>
+        </a>
+    </div>
+
+    <audio autoplay loop="true" id="theme">
+        <source src="Theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,384 @@
+@font-face {
+    font-family: "custom";
+    src: url(resources/fonts/Jaro.ttf);
+}
+
+@font-face {
+    font-family: "custom2";
+    src: url(resources/fonts/Akronim.ttf);
+}
+
+.background {
+    background-size: 200vh;
+    background-position-y: -3.0667vh;
+    position: fixed;
+    display: flex;
+    background-color: #000000;
+}
+
+.base {
+    height: 28vh;
+    margin-left: -8px;
+    min-width: 100vw;
+    background-repeat: repeat;
+    /* min-width: 800px; */
+    margin-top: 92.5vh;
+    position: absolute;
+    filter: contrast(120%);
+}
+
+.container {
+    display: flex;
+    /* position: absolute; */
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    width: 98.8vw;
+    height: 80px;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+}
+
+.name {
+    font-size: 45px;
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+    font-family: "custom";
+    /* margin-top: 15px;
+    margin-right: 50px; */
+    transition: all 0.4s;
+}
+
+.name:hover {
+    color: azure;
+}
+
+.score {
+    font-size: 40px;
+    color: rgb(22, 22, 22);
+    font-weight: bold;
+    font-family: "custom";
+    /* margin-top: 20px;
+    margin-left: 50px; */
+    transition: all 0.4s;
+}
+
+.score:hover {
+    color: azure;
+}
+
+.text{
+    width: 168px;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    margin-left: -10px;
+    z-index: 103;
+}
+
+.level {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 45px;
+    color: #1cabe7;
+    font-weight: bold;
+    font-family: "custom";
+    /* margin-top: 20px;
+    margin-left: 50px; */
+    background-color: #000000;
+    width: 170px;
+    height: 62px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: all 0.4s;
+}
+
+.level:hover {
+    background-color: azure;
+    box-shadow: 1px 0px 25px 1px rgba(128, 0, 0, 0.3);
+}
+
+.landpage {
+    z-index: 200;
+}
+
+.menu {
+    margin-top: -8.6667vh;
+    margin-left: -0.8vw;
+    min-height: 112vh;
+    min-width: 100vw;
+    position: absolute;
+}
+
+.menudiv {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    justify-self: center;
+    align-self: flex-end;
+    align-items: end;
+}
+
+.menutext {
+    position: absolute;
+    font-size: 3.8vw;
+    width: 60vw;
+    height: 7vw;
+    margin-bottom: 15vh;
+    font-family: "custom2";
+    margin-top: 0.2vw;
+    color: rgb(43, 4, 4);
+    background-color: rgba(255, 187, 0, 0.086);
+    border-radius: 25px 0px / 25px 0px;
+    border: 1px solid;
+    border-color: rgb(93, 13, 13);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    transition: all .4s;
+}
+
+.menutext:hover {
+    background-color: rgba(255, 187, 0, 0.267);
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    margin-bottom: 14vh;
+    font-size: 4vw;
+    backdrop-filter: blur(10px);
+    width: 120vw;
+    cursor: pointer;
+    box-shadow: 1px 0px 25px 1px rgba(128, 0, 0, 0.3);
+}
+
+.intro1 {
+    margin-top: -8.6667vh;
+    margin-left: -2.8571vw;
+    width: 110vw;
+    min-height: 112vh;
+    position: absolute;
+    justify-self: center;
+    z-index: 104;
+}
+
+.sprite {
+    height: 68.5vh;
+    margin-top: 38.8vh;
+    margin-left: 0px;
+    position: absolute;
+}
+
+.object {
+    height: 25.5vh;
+    margin-top: 67.5vh;
+    position: absolute;
+}
+
+.object2 {
+    height: 25.5vh;
+    margin-top: 67.5vh;
+    position: absolute;
+}
+
+.gameoverdiv {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin-left: -2.5vw;
+    margin-top: -5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+    z-index: 100;
+    background-color: #5d0e0745;
+    backdrop-filter: blur(20px);
+    /* transition-property: visibility;
+    transition-delay: 1s;
+    transition-duration: 0.5s; */
+    visibility: hidden;
+    opacity: 0;
+    z-index: 104;
+    transition: 0.4s;
+}
+
+.gameoverdiv.loading {
+    opacity: 1;
+    visibility: visible;
+}
+
+.gameovercard {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 60vw;
+    height: 28vw;
+    background-color: rgba(54, 8, 8, 0.56);
+    border-radius: 50px 0px 50px 0px;
+    border: 2px solid;
+    border-color: rgb(255, 188, 3);
+    transition: .4s;
+    transition-property: background-color, width, box-shadow;
+}
+
+.gameovercard:hover {
+    background-color: rgba(54, 8, 8, 0.834);
+    width: 120vw;
+    cursor: pointer;
+    box-shadow: 1px 0px 25px 1px rgba(128, 0, 0, 0.3);
+}
+
+.gameovercard:hover .highscore{
+    opacity: 0;
+}
+
+.gameovertext {
+    padding-top: 4vw;
+    font-size: 9vw;
+    font-family: "custom";
+    color: rgb(255, 188, 3);
+}
+
+.gameovertext2 {
+    padding: 1.5vw;
+    font-size: 2.8vw;
+    font-family: "custom";
+    color: rgba(255, 255, 255, 0.562);
+}
+
+.highscore {
+    position:relative;
+    display: flex;
+    height: 4vw;
+    font-size: 2.2vw;
+    font-family: "custom";
+    color: rgba(255, 188, 3, 0.668);
+    margin-top: 12.5vh;
+    transition: all 0.2s;
+    width: 16vw;
+    margin-left: -44.2vw;
+}
+
+.infodiv {
+    height: 30px;
+    width: 98vw;
+    margin-bottom: 18px;
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: flex-end;
+    z-index: 200;
+}
+
+.infocard {
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 28px;
+    width: 70px;
+    display: flex;
+    background-color: rgba(238, 238, 238, 0.604);
+    border-radius: 8px;
+    transition: background-color .5s;
+}
+
+.infoimage {
+    height: 18px;
+    margin-top: 3px;
+    margin-right: 1px;
+}
+
+.infotext {
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    color: #5D0E07;
+    margin-bottom: 5px;
+}
+
+.infocard:hover {
+    background-color: rgb(238, 238, 238);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------------------
+-------------------------------------- */
+
+.container {
+    opacity: 0;
+}
+
+.background.loaded {
+    background-image: url(resources/images/Background3.gif);
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+
+    to {
+        transform: rotate(2turn);
+    }
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color:#ff00001b;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    z-index: 210;
+}
+
+.loader.hidden{
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+}
+
+.loader::after{
+    content: "";
+    width: 21px;
+    height: 21px;
+    border: 10px solid;
+    border-color: #252525;
+    border-bottom-color: rgba(255, 61, 61, 0);
+    border-radius: 50%;
+    animation: loading 1s infinite;
+}
+
+.loader-inner {
+    position: fixed;
+    margin-top: 85px;
+    font-family: 'custom';
+    font-size: 26.5px;
+}
+
+.hiddenimages {
+    opacity: 0;
+    position: absolute;
+    z-index: 0;
+}
