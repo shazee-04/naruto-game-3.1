@@ -1,11 +1,21 @@
 body {
     display: flex;
-    background-color: #ebebeb;
+    /* background-color: #ebebeb;
     background-image: url(images/2.jpg);
-    background-size: 100%;
+    background-size: 200vh;
     background-repeat: no-repeat;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
     margin: 0;
+    flex-direction: column;
+    /* gap: 200px; */
+    background-color: #161616;
+}
+
+.info {
+    background-image: url(images/2.jpg);
+    background-size: 200vh;
+    height: 100%;
+    display: flex;
 }
 
 /* Chrome, Edge and Safari */
@@ -43,19 +53,20 @@ body {
 
 
 .section {
-    height: 107vh;
+    height: 800px;
     width: 100vw;
     gap: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    backdrop-filter: blur(10px);
 }
 
 .dpdiv {
     height: 300px;
     width: 300px;
     margin-top: 65px;
-    background-color: aqua;
+    background-color: #333;
     display: flex;
     justify-content: center;
     clip-path: circle(50% at 50% 50%);
@@ -83,7 +94,7 @@ body {
     transition: all 0.4s;
 }
 
-.detailsdiv:hover{
+.detailsdiv:hover {
     scale: 1.03;
     border-color: #ffffff81;
     background-color: #e8e8e8c5;
@@ -94,7 +105,8 @@ p1 {
     font-size: 60px;
     padding-bottom: 10px;
     font-weight: bold;
-    align-self: center;
+    align-self: self-start;
+    margin-left: 20px;
     color: #161616;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -158,4 +170,46 @@ a {
 
 a:hover {
     scale: 1.1;
+}
+
+.controls {
+    height: 100%;
+    /* width: 100%; */
+    background-image: url(images/1.jpg);
+    /* background-repeat: no-repeat; */
+    background-size: 200vh;
+    background-color: #333;
+    /* filter: blur(5px); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section2 {
+    display: flex;
+    height: 100%;
+    padding: 55px;
+    width: 200vh;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+
+.controlsdiv {
+    height: 700px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff41;
+    border: 1px solid;
+    border-color: #fff;
+    border-radius: 20px;
+    transition: all 0.4s;
+}
+
+.controlsdiv:hover {
+    scale: 1.03;
+    border-color: #ffffff81;
+    background-color: #e8e8e8c5;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.41);
 }
