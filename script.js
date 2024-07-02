@@ -32,7 +32,7 @@ function movement(event) {
         }
     }
     if (isdead == 0) {
-        if (event.key == "d") {
+        if (event.key == "d" || event.keyCode == '39') {
             if (scoreworker != 0) {
                 if (runfworker == 0) {
                     if (runbworker == 0) {
@@ -48,7 +48,7 @@ function movement(event) {
             }
         }
 
-        if (event.key == "a") {
+        if (event.key == "a" || event.keyCode == '37') {
             if (scoreworker != 0) {
                 if (runbworker == 0) {
                     if (runfworker == 0) {
@@ -64,7 +64,7 @@ function movement(event) {
             }
         }
 
-        if (event.key == "w") {
+        if (event.key == "w" || event.keyCode == '38') {
             if (scoreworker != 0) {
                 if (jumpworker == 0) {
                     if (intervalworker == 0) {
@@ -81,7 +81,7 @@ function movement(event) {
             }
         }
 
-        if (event.key == "s") {
+        if (event.key == "s" || event.keyCode == '40') {
             if (scoreworker != 0) {
                 if (jumpworker == 0) {
                     if (runfworker == 0) {
